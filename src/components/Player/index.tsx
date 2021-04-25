@@ -34,14 +34,6 @@ export function Player() {
       return;
     }
 
-    function setupProgressListener() {
-      audioRef.current.currentTime = 0;
-
-      audioRef.current.addEventListener('timeupdate', () => {
-        setProgress(audioRef.current.currentTime);
-      });
-    }
-
     if (isPlaying) {
       audioRef.current.play();
     } else {
